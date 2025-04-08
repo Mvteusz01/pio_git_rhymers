@@ -9,7 +9,7 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
     /**
      * Liczba wartości odrzuconych przy próbie dodania do stosu.
      */
-    int totalRejected = 0;
+    private int totalRejected = 0;
 
     /**
      * Zwraca łączną liczbę odrzuconych wartości.
@@ -32,5 +32,14 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
             totalRejected++;
         else
             super.countIn(in);
+    }
+
+    /**
+     * Getter do odczytu liczby odrzuceń.
+     *
+     * @return liczba odrzuceń
+     */
+    public int getTotalRejected() {
+        return totalRejected;
     }
 }
